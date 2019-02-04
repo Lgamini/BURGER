@@ -1,5 +1,5 @@
 {
-  "name": "Node-Express-Handlebars",
+  "name": "NodeExpressHandlebars",
   "version": "1.0.0",
   "description": "node express handlebars",
   "main": "index.js",
@@ -15,9 +15,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lgamini/Node-Express-Handlebars/issues"
+    "url": "https://github.com/Lgamini/NodeExpressHandlebars/issues"
   },
-  "homepage": "https://github.com/Lgamini/Node-Express-Handlebars#readme",
+  "homepage": "https://github.com/Lgamini/NodeExpressHandlebars#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
