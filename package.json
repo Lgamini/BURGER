@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lgamini/Node-Express-Handlebars.git"
+    "url": "https://github.com/Lgamini/https://github.com/Lgamini/BURGER.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lgamini/NodeExpressHandlebars/issues"
+    "url": "https://github.com/Lgamini/https://github.com/Lgamini/BURGER/issues"
   },
-  "homepage": "https://github.com/Lgamini/NodeExpressHandlebars#readme",
+  "homepage": "https://github.com/Lgamini/https://github.com/Lgamini/BURGER#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
