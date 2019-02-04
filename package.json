@@ -1,5 +1,5 @@
 {
-  "name": "BURGER",
+  "name": "burger",
   "version": "1.0.0",
   "description": "node express handlebars",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lgamini/https://github.com/Lgamini/BURGER.git"
+    "url": "https://github.com/Lgamini/burge.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lgamini/https://github.com/Lgamini/BURGER/issues"
+    "url": "https://github.com/Lgamini/burge/issues"
   },
-  "homepage": "https://github.com/Lgamini/https://github.com/Lgamini/BURGER#readme",
+  "homepage": "https://github.com/Lgamini/burger#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
