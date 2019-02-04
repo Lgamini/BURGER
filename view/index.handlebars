@@ -1,0 +1,83 @@
+<div class="container mb-3">
+    <div class="row justify-content-center">
+        <div class="burgerImg">
+            <img src="assets/img/burger.png" class="img-fluid" alt="burger">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-sm-4">
+            <h1>Eat-Da-Burger!</h1>
+            <input type="text" id="addBurger" class="form-control">
+            <button type="submit" class="btn btn-primary mt-2" id="getBurger">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {{#each burgerArray}}
+                <div class="container m-1 p-1">
+                    <div class="textBlock">
+                        <span>{{this.id}}. {{this.burger_name}}</span>
+                    </div>
+                    <button class="devour" data-num="{{this.id}}">Devour it!</button>
+                </div>
+            {{/each}}
+        </div>
+        <div class="col">
+            {{#each devouredArray}}
+                <div class="container m-0 p-0">
+                    <div class="textBlock2">
+                        <span>{{this.id}}. {{this.burger_name}}</span>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function(){
+        //console.log("successful");
+        //button click for submitting new burger
+        $("#getBurger").on('click',(event)=>{
+            event.preventDefault();
+            var newBurger = {
+                burger_name: $('#addBurger').val()
+            };
+            //console.log(newBurger);
+            $.ajax({
+                method:"POST",
+                url: "/api/burgers",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                data: JSON.stringify(newBurger)
+            }).then(data=>{
+                if(data){
+                    console.log("added new burger");
+                    //reloads the page
+                    location.reload();
+                }
+            });
+        })
+        //button click for eatting the burgers
+        $('body').on('click','.devour',function(){
+            var id = $(this).data('num');
+            console.log("eat burger # " + id);
+            $.ajax({
+                method: "PUT",
+                url: `/api/burgers/${id}`
+            }).then(data=>{
+                if(data){
+                    console.log("eatten burger #" + id);
+                    //reloads the page
+                    location.reload();
+                }
+            })
+        })
+    });
+</script>
