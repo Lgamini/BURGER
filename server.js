@@ -5,14 +5,14 @@ var bodyParser = require('body-parser');
 var handlebars = require('express-handlebars');
 
 var PORT = process.env.PORT || 8080;
-
+var path = require('path')
 var app = express();
 
 app.use(express.static("public"));
 //app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(bodyParser.json());
-
+app.set('views', path.join(__dirname, 'views/'));
 //handlebars
 app.engine('handlebars', handlebars({defaultLayout: 'main'}));
 app.set('view engine','handlebars');
